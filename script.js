@@ -1,10 +1,10 @@
-const generateButton = document.querySelector("Button");
+const generateButton = document.getElementById("generateButton");
 const resetButton = document.getElementById("resetButton");
 const display = document.getElementById("spellArea");
 
 generateButton.addEventListener("click", function() {
     const ingredients = document.getElementById("ingredientsList");
-    const items = ingredients.querySelectorAll("#ingredientsList li");
+    const items = ingredients.querySelectorAll(" li");
     const randomNum = Math.floor(Math.random() * items.length);
     const r = Math.floor(Math.random() * 256);
     const g = Math.floor(Math.random() * 256);
@@ -13,7 +13,7 @@ generateButton.addEventListener("click", function() {
 
 
 
-    let count = 5;
+    let count = 3;
 
     display.textContent = count;
 
@@ -33,4 +33,5 @@ generateButton.addEventListener("click", function() {
 
 resetButton.addEventListener("click", function() {
     display.textContent = "";
+    display.style.backgroundColor = ""
 })
