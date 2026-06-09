@@ -4,7 +4,7 @@ const display = document.getElementById("spellArea");
 
 generateButton.addEventListener("click", function() {
     const ingredients = document.getElementById("ingredientsList");
-    const items = ingredients.querySelectorAll(" li");
+    const items = ingredients.querySelectorAll("li");
     const randomNum = Math.floor(Math.random() * items.length);
     const r = Math.floor(Math.random() * 256);
     const g = Math.floor(Math.random() * 256);
